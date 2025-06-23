@@ -79,7 +79,7 @@ function IntroductionLeftPanel() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "left-panel-profile"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: "../src/assets/portfolio_picture.png"
+    src: "src/assets/portfolio_picture.png"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Links_js__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IntroductionLeftPanel);

@@ -6,7 +6,7 @@ function IntroductionLeftPanel() {
     return (
             <div className="left-panel">
                 <div className="left-panel-profile">
-                    <img src="../src/assets/portfolio_picture.png"></img>
+                    <img src="src/assets/portfolio_picture.png"></img>
                 </div>
                 <Links/>
             </div>
