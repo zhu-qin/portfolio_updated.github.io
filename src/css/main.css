@@ -1,0 +1,56 @@
+body, div, a {
+    background: transparent;
+    font: inherit;
+    font-family: 'Electrolize', sans-serif;
+    text-decoration: none;
+    box-sizing: inherit;
+    letter-spacing: inherit;
+}
+
+.links {
+ color: black;
+    display: block;
+    border-radius: 3px;
+    border: 1px solid black;
+    height: 60px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 55px;
+    background-color: rgba(63, 191, 157, 0.3);
+}
+
+.links-wrapper {
+    width: 220px;
+}
+
+.left-panel {
+    width: 220px;
+    padding: 10px;
+}
+
+.left-panel-profile {
+    height: 200px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background-color: rgba(63, 191, 157, 0.3);
+}
+
+.left-panel-profile img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.game-wrapper {
+    display: flex;
+}
+
+.game-view {
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-left: 1px;
+}
