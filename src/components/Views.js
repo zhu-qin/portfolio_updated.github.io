@@ -1,8 +1,7 @@
 import React from 'react';
 import IntroductionView from './introduction_view/IntroductionView.js';
-import InvadersView from './invaders_view/InvadersView.js';
 import ContactView from './contact_view/ContactView.js';
-
+import InvadersView from './invaders_view/InvadersView.js';
 
 
 let Views = {

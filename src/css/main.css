@@ -54,3 +54,12 @@ body, div, a {
     border-radius: 3px;
     margin-left: 1px;
 } */
+
+.left-panel-lives {
+  display: flex;
+}
+
+.left-panel-lives img {
+  width: 50%;
+  margin: auto;
+}

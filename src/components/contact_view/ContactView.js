@@ -1,5 +1,4 @@
 import React from 'react';
-import IntroductionLeftPanel from '../introduction_view/IntroductionLeftPanel.js';
 import IntroductionView from '../introduction_view/IntroductionView.js';
 
 const formStyle = {

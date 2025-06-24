@@ -1,0 +1,6 @@
+#canvas {
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-left: 1px;
+  background-image: url('../components/invaders_view/assets/images/background.png');
+}

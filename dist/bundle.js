@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/components/Links.js":
@@ -8,6 +7,7 @@
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -39,6 +39,7 @@ function Links() {
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -46,16 +47,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _introduction_view_IntroductionView_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./introduction_view/IntroductionView.js */ "./src/components/introduction_view/IntroductionView.js");
-/* harmony import */ var _invaders_view_InvadersView_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./invaders_view/InvadersView.js */ "./src/components/invaders_view/InvadersView.js");
-/* harmony import */ var _contact_view_ContactView_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact_view/ContactView.js */ "./src/components/contact_view/ContactView.js");
+/* harmony import */ var _contact_view_ContactView_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact_view/ContactView.js */ "./src/components/contact_view/ContactView.js");
+/* harmony import */ var _invaders_view_InvadersView_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./invaders_view/InvadersView.js */ "./src/components/invaders_view/InvadersView.js");
 
 
 
 
 let Views = {
   "Introduction": _introduction_view_IntroductionView_js__WEBPACK_IMPORTED_MODULE_1__["default"],
-  "Invaders": _invaders_view_InvadersView_js__WEBPACK_IMPORTED_MODULE_2__["default"],
-  "Contact": _contact_view_ContactView_js__WEBPACK_IMPORTED_MODULE_3__["default"]
+  "Invaders": _invaders_view_InvadersView_js__WEBPACK_IMPORTED_MODULE_3__["default"],
+  "Contact": _contact_view_ContactView_js__WEBPACK_IMPORTED_MODULE_2__["default"]
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Views);
 
@@ -67,15 +68,14 @@ let Views = {
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _introduction_view_IntroductionLeftPanel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../introduction_view/IntroductionLeftPanel.js */ "./src/components/introduction_view/IntroductionLeftPanel.js");
-/* harmony import */ var _introduction_view_IntroductionView_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../introduction_view/IntroductionView.js */ "./src/components/introduction_view/IntroductionView.js");
-
+/* harmony import */ var _introduction_view_IntroductionView_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../introduction_view/IntroductionView.js */ "./src/components/introduction_view/IntroductionView.js");
 
 
 const formStyle = {
@@ -137,7 +137,7 @@ const contact = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().create
   name: "_replyto"
 }))));
 function ContactView() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_introduction_view_IntroductionView_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_introduction_view_IntroductionView_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
     embeddedView: contact
   }));
 }
@@ -151,6 +151,7 @@ function ContactView() {
   \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -179,6 +180,7 @@ function IntroductionLeftPanel() {
   \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -232,6 +234,811 @@ function IntroductionView(props) {
   \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _stateManager_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stateManager.js */ "./src/components/invaders_view/stateManager.js");
+/* harmony import */ var _assets_images_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/images.js */ "./src/components/invaders_view/assets/images.js");
+/* harmony import */ var _assets_images_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_images_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _left_panel_space_invaders_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./left_panel_space_invaders.js */ "./src/components/invaders_view/left_panel_space_invaders.js");
+
+
+
+
+let imagesLoaded = false;
+class InvadersView extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  componentDidMount() {
+    let canvas = document.getElementById('canvas');
+    let ctx = canvas.getContext('2d');
+    ctx.font = "24px serif";
+    ctx.fillStyle = "#fff";
+    // ctx.strokeStyle = "black";
+
+    if (!localStorage.highScores) {
+      localStorage.highScores = "0";
+    }
+    if (!imagesLoaded) {
+      _assets_images_js__WEBPACK_IMPORTED_MODULE_2___default().loadImages(ctx, () => {
+        imagesLoaded = true;
+        this.startGame(ctx);
+      });
+    } else {
+      this.startGame(ctx);
+    }
+  }
+  startGame(ctx) {
+    this.state.game = new _stateManager_js__WEBPACK_IMPORTED_MODULE_1__["default"]({
+      context: ctx,
+      reactView: this
+    });
+    this.state.game.showMenu();
+    this.panel = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_left_panel_space_invaders_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      game: this.state.game
+    });
+    this.forceUpdate();
+  }
+  componentWillUnmount() {
+    this.state.game.unMountGame();
+  }
+  render() {
+    let canvas = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("canvas", {
+      id: "canvas",
+      height: "600",
+      width: "800"
+    });
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "game-wrapper"
+    }, this.panel, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "gameview"
+    }, canvas));
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InvadersView);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/assets/images.js":
+/*!*******************************************************!*\
+  !*** ./src/components/invaders_view/assets/images.js ***!
+  \*******************************************************/
+/***/ ((module) => {
+
+let imageFiles = ['explosion', 'ship', 'ship_bullet', 'intro', 'red_invader', 'alien_bullet', 'green_invader', 'rock', 'gameover'];
+const Images = {
+  loading: 0,
+  loadImages: function (ctx, startGame) {
+    imageFiles.forEach(imageName => {
+      let img = new Image();
+      img.onload = function () {
+        Images[imageName] = img;
+        Images.loading += 1;
+        ctx.fillText("LOADING...", 350, 300);
+        if (Images.loading === imageFiles.length) {
+          startGame();
+        }
+      };
+      img.src = `src/components/invaders_view/assets/images/${imageName}.png`;
+    });
+  }
+};
+module.exports = Images;
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/entities/alien.js":
+/*!********************************************************!*\
+  !*** ./src/components/invaders_view/entities/alien.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./entity */ "./src/components/invaders_view/entities/entity.js");
+/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images */ "./src/components/invaders_view/assets/images.js");
+/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_images__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _bullet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bullet */ "./src/components/invaders_view/entities/bullet.js");
+
+
+
+class Alien extends _entity__WEBPACK_IMPORTED_MODULE_0__["default"] {
+  constructor(initialState) {
+    super(initialState);
+    this.sprite = (_assets_images__WEBPACK_IMPORTED_MODULE_1___default().green_invader);
+    this.type = 'Alien';
+  }
+  fireBullet() {
+    let bullet = new _bullet__WEBPACK_IMPORTED_MODULE_2__["default"]({
+      pos: Object.assign([], this.pos),
+      stateManager: this.stateManager,
+      type: 'AlienBullet'
+    });
+    this.stateManager.playingState.alienBullets.push(bullet);
+  }
+  tick() {
+    if (Math.floor(Math.random() * this.stateManager.config.alienBulletFrequency) === 1) {
+      this.fireBullet();
+    }
+    this.pos[0] += this.vector[0];
+    this.pos[1] += this.vector[1];
+  }
+  render() {
+    this.stateManager.context.drawImage(this.sprite, this.pos[0] - 25, this.pos[1] - 25, 50, 50);
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Alien);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/entities/bullet.js":
+/*!*********************************************************!*\
+  !*** ./src/components/invaders_view/entities/bullet.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _entity_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./entity.js */ "./src/components/invaders_view/entities/entity.js");
+/* harmony import */ var _assets_images_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images.js */ "./src/components/invaders_view/assets/images.js");
+/* harmony import */ var _assets_images_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_images_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+class Bullet extends _entity_js__WEBPACK_IMPORTED_MODULE_0__["default"] {
+  constructor(initialState) {
+    super(initialState);
+    this.setSprite();
+    this.radius = 5;
+  }
+  setSprite() {
+    if (this.type === 'AlienBullet') {
+      this.sprite = (_assets_images_js__WEBPACK_IMPORTED_MODULE_1___default().alien_bullet);
+      this.vector = [0, this.stateManager.config.alienBulletSpeed];
+    } else if (this.type === 'ShipBullet') {
+      this.sprite = (_assets_images_js__WEBPACK_IMPORTED_MODULE_1___default().ship_bullet);
+      this.vector = [0, -this.stateManager.config.shipBulletSpeed];
+    }
+  }
+  checkIfVisible() {
+    if (this.isOutsideHorizontal()) {
+      this.stateManager.playingState.remove(this);
+    }
+  }
+  tick() {
+    this.pos[0] += this.vector[0];
+    this.pos[1] += this.vector[1];
+    this.checkIfVisible();
+  }
+  render() {
+    this.stateManager.context.drawImage(this.sprite, this.pos[0] - 20, this.pos[1] - 20, 50, 50);
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Bullet);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/entities/entity.js":
+/*!*********************************************************!*\
+  !*** ./src/components/invaders_view/entities/entity.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class Entity {
+  constructor(initialState) {
+    this.type = initialState.type;
+    this.pos = initialState.pos;
+    this.vector = initialState.vector;
+    this.sprite = initialState.sprite;
+    this.stateManager = initialState.stateManager;
+    this.radius = this.stateManager.config.entityRadius;
+  }
+  isOutsideHorizontal() {
+    return this.pos[0] - this.radius <= 0 || this.pos[0] + this.radius >= this.stateManager.gameWidth;
+  }
+  isOutsideVertical() {
+    return this.pos[1] - this.radius <= 0 || this.pos[1] + this.radius >= this.stateManager.gameHeight;
+  }
+  preTick() {}
+  tick() {
+    this.pos[0] += this.vector[0];
+    this.pos[1] += this.vector[1];
+  }
+  render() {
+    this.stateManager.context.drawImage(this.sprite, this.pos[0], this.pos[1], 50, 50);
+  }
+  postRender() {
+    let ctx = this.stateManager.context;
+    ctx.beginPath();
+    ctx.arc(this.pos[0], this.pos[1], this.radius, 0, Math.PI * 2, true);
+    ctx.stroke();
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Entity);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/entities/explosion.js":
+/*!************************************************************!*\
+  !*** ./src/components/invaders_view/entities/explosion.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./entity */ "./src/components/invaders_view/entities/entity.js");
+/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images */ "./src/components/invaders_view/assets/images.js");
+/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_images__WEBPACK_IMPORTED_MODULE_1__);
+
+
+class Explosion extends _entity__WEBPACK_IMPORTED_MODULE_0__["default"] {
+  constructor(initialState) {
+    super(initialState);
+    this.sprite = (_assets_images__WEBPACK_IMPORTED_MODULE_1___default().explosion);
+    this.frameX = 0;
+    this.frameY = 0;
+    this.frameWidth = 128;
+    this.frameHeight = 128;
+    this.counter = 0;
+  }
+  tick() {
+    this.counter += 1;
+  }
+  updateSpriteFrame() {
+    this.frameX += this.frameWidth;
+    if (this.frameX >= 640) {
+      this.frameX = 0;
+      this.frameY += this.frameHeight;
+    }
+    if (this.frameY > 1152) {
+      this.stateManager.playingState.explosions.shift();
+    }
+  }
+  draw() {
+    this.stateManager.context.drawImage(this.sprite, this.frameX, this.frameY, this.frameWidth, this.frameHeight, this.pos[0] - 60, this.pos[1] - 60, this.frameWidth, this.frameHeight);
+    if (this.counter % 3 === 0) {
+      this.updateSpriteFrame();
+    }
+  }
+  render() {
+    this.draw();
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Explosion);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/entities/rock.js":
+/*!*******************************************************!*\
+  !*** ./src/components/invaders_view/entities/rock.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _entity_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./entity.js */ "./src/components/invaders_view/entities/entity.js");
+/* harmony import */ var _assets_images_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images.js */ "./src/components/invaders_view/assets/images.js");
+/* harmony import */ var _assets_images_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_images_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+class Rock extends _entity_js__WEBPACK_IMPORTED_MODULE_0__["default"] {
+  constructor(initialState) {
+    super(initialState);
+    this.sprite = (_assets_images_js__WEBPACK_IMPORTED_MODULE_1___default().rock);
+    this.frameX = 0;
+    this.frameY = 0;
+    this.frameWidth = 256;
+    this.frameHeight = 256;
+    this.counter = 0;
+    this.radius = 40;
+  }
+  draw() {
+    this.stateManager.context.drawImage(this.sprite, this.frameX, this.frameY, this.frameWidth, this.frameHeight, this.pos[0] - 65, this.pos[1] - 65, this.frameWidth / 2, this.frameHeight / 2);
+    if (this.counter % 3 === 0) {
+      this.updateSpriteFrame();
+    }
+  }
+  updateSpriteFrame() {
+    this.frameX += this.frameWidth;
+    if (this.frameX >= 2048) {
+      this.frameX = 0;
+      this.frameY += this.frameHeight;
+    }
+    if (this.frameY >= 2048 / 2) {
+      this.frameY = 0;
+    }
+  }
+  checkWalls() {
+    if (this.isOutsideHorizontal()) {
+      this.vector[0] = -this.vector[0];
+    }
+    if (this.isOutsideVertical()) {
+      this.vector[1] = -this.vector[1];
+    }
+  }
+  updateVerticalPosition() {
+    if (Math.abs(this.vector[1]) > 5) {
+      this.vector[1] = this.vector[1] - this.vector[1] % 5;
+    }
+  }
+  tick() {
+    this.checkWalls();
+    this.updateVerticalPosition();
+    this.pos[0] += this.vector[0];
+    this.pos[1] += this.vector[1];
+    this.counter += 1;
+  }
+  render() {
+    this.draw();
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Rock);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/entities/ship.js":
+/*!*******************************************************!*\
+  !*** ./src/components/invaders_view/entities/ship.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./entity */ "./src/components/invaders_view/entities/entity.js");
+/* harmony import */ var _bullet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bullet */ "./src/components/invaders_view/entities/bullet.js");
+/* harmony import */ var _explosion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./explosion */ "./src/components/invaders_view/entities/explosion.js");
+/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/images */ "./src/components/invaders_view/assets/images.js");
+/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_images__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+class Ship extends _entity__WEBPACK_IMPORTED_MODULE_0__["default"] {
+  constructor(initialState) {
+    super(initialState);
+    this.sprite = (_assets_images__WEBPACK_IMPORTED_MODULE_3___default().ship);
+    this.type = 'Ship';
+    this.counter = 120;
+    this.gunCounter = 0;
+    this.radius = 25;
+  }
+  updatePosition() {
+    let keys = this.stateManager.keyManager;
+    let conf = this.stateManager.config;
+    if (keys.leftPressed && this.pos[0] - this.radius >= 0) {
+      this.pos[0] -= conf.shipMoveSpeed;
+    }
+    if (keys.downPressed && this.pos[1] + this.radius <= this.stateManager.gameHeight) {
+      this.pos[1] += conf.shipMoveSpeed;
+    }
+    if (keys.rightPressed && this.pos[0] + this.radius <= this.stateManager.gameWidth) {
+      this.pos[0] += conf.shipMoveSpeed;
+    }
+    if (keys.upPressed && this.pos[1] - this.radius >= 0) {
+      this.pos[1] -= conf.shipMoveSpeed;
+    }
+  }
+  fire() {
+    let spacePressed = this.stateManager.keyManager.spacePressed;
+    if (spacePressed && this.gunCounter % 20 === 10) {
+      let bullet = new _bullet__WEBPACK_IMPORTED_MODULE_1__["default"]({
+        stateManager: this.stateManager,
+        pos: Object.assign([], this.pos),
+        vector: [0, -this.stateManager.config.shipBulletSpeed],
+        type: "ShipBullet"
+      });
+      this.stateManager.playingState.shipBullets.push(bullet);
+    } else if (!spacePressed) {
+      this.gunCounter = 5;
+    }
+  }
+  isCollidable() {
+    return this.counter >= 120;
+  }
+  draw() {
+    this.stateManager.context.drawImage(this.sprite, this.pos[0] - 25, this.pos[1] - 25, 50, 50);
+  }
+  tick() {
+    this.counter += 1;
+    this.gunCounter += 1;
+    this.updatePosition();
+    this.fire();
+  }
+  render() {
+    if (this.counter > 120 || this.counter % 5 === 0) {
+      this.draw();
+    }
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Ship);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/entities/specialAlien.js":
+/*!***************************************************************!*\
+  !*** ./src/components/invaders_view/entities/specialAlien.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _alien__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./alien */ "./src/components/invaders_view/entities/alien.js");
+
+class SpecialAlien extends _alien__WEBPACK_IMPORTED_MODULE_0__["default"] {
+  constructor(initialState) {
+    super(initialState);
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SpecialAlien);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/gameState/gameState.js":
+/*!*************************************************************!*\
+  !*** ./src/components/invaders_view/gameState/gameState.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class GameState {
+  constructor(initialState) {
+    this.stateManager = initialState.stateManager;
+  }
+  preTick() {}
+  tick() {}
+  render() {}
+  postRender() {}
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GameState);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/gameState/menuState.js":
+/*!*************************************************************!*\
+  !*** ./src/components/invaders_view/gameState/menuState.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _gameState__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gameState */ "./src/components/invaders_view/gameState/gameState.js");
+/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images */ "./src/components/invaders_view/assets/images.js");
+/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_images__WEBPACK_IMPORTED_MODULE_1__);
+
+
+class MenuState extends _gameState__WEBPACK_IMPORTED_MODULE_0__["default"] {
+  constructor(initialState) {
+    super(initialState);
+    this.sprite = (_assets_images__WEBPACK_IMPORTED_MODULE_1___default().intro);
+  }
+  tick() {}
+  render() {
+    this.stateManager.context.drawImage(this.sprite, 280, 300);
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MenuState);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/gameState/playingState.js":
+/*!****************************************************************!*\
+  !*** ./src/components/invaders_view/gameState/playingState.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _gameState__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gameState */ "./src/components/invaders_view/gameState/gameState.js");
+/* harmony import */ var _entities_ship__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../entities/ship */ "./src/components/invaders_view/entities/ship.js");
+/* harmony import */ var _entities_alien__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../entities/alien */ "./src/components/invaders_view/entities/alien.js");
+/* harmony import */ var _entities_bullet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../entities/bullet */ "./src/components/invaders_view/entities/bullet.js");
+/* harmony import */ var _entities_rock__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../entities/rock */ "./src/components/invaders_view/entities/rock.js");
+/* harmony import */ var _entities_explosion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../entities/explosion */ "./src/components/invaders_view/entities/explosion.js");
+/* harmony import */ var _spaceInvadersUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../spaceInvadersUtils */ "./src/components/invaders_view/spaceInvadersUtils.js");
+/* harmony import */ var _entities_specialAlien__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../entities/specialAlien */ "./src/components/invaders_view/entities/specialAlien.js");
+
+
+
+
+
+
+
+
+class PlayingState extends _gameState__WEBPACK_IMPORTED_MODULE_0__["default"] {
+  constructor(initialState) {
+    super(initialState);
+    this.ship = [this.makeShip()];
+    this.rock = [this.makeRock()];
+    this.shipBullets = [];
+    this.alienBullets = [];
+    this.explosions = [];
+    this.aliens = this.makeAliens();
+    this.setVectorForAlien = this.setVectorFunction();
+    this.counter = 0;
+    this.spawnCounter = 0;
+    this.shipLives = this.stateManager.config.shipLives;
+    this.score = 0;
+  }
+  makeShip() {
+    return new _entities_ship__WEBPACK_IMPORTED_MODULE_1__["default"]({
+      pos: Object.assign([], this.stateManager.config.shipStartPos),
+      vector: [0, 0],
+      stateManager: this.stateManager
+    });
+  }
+  makeRock() {
+    return new _entities_rock__WEBPACK_IMPORTED_MODULE_4__["default"]({
+      pos: Object.assign([], this.stateManager.config.rockStartPos),
+      vector: [this.stateManager.config.rockSpeed, 0],
+      stateManager: this.stateManager
+    });
+  }
+  makeAliens() {
+    let aliens = [];
+    let alienGap = this.stateManager.config.alienGap;
+    let alienStartPos = this.stateManager.config.alienStartPos;
+    for (let i = alienStartPos; i < this.stateManager.gameWidth - 50; i += alienGap) {
+      for (let j = 50; j < this.stateManager.gameHeight - 400; j += 70) {
+        aliens.push(new _entities_alien__WEBPACK_IMPORTED_MODULE_2__["default"]({
+          vector: [0, 0],
+          pos: [i, j],
+          stateManager: this.stateManager
+        }));
+      }
+    }
+    return aliens;
+  }
+  joinEntities() {
+    return [].concat(this.rock, this.ship, this.aliens, this.shipBullets, this.alienBullets, this.explosions);
+  }
+  setVectorFunction() {
+    let direction = 'right';
+    return () => {
+      this.aliens.forEach(alien => {
+        alien.vector = direction === 'right' ? [1, 0] : [-1, 0];
+        alien.pos[1] += 5;
+      });
+      direction = direction === 'right' ? 'left' : 'right';
+    };
+  }
+  addExplosion(entity) {
+    this.explosions.push(new _entities_explosion__WEBPACK_IMPORTED_MODULE_5__["default"]({
+      pos: entity.pos,
+      vector: [0, 0],
+      stateManager: this.stateManager
+    }));
+  }
+  remove(entity) {
+    if (entity.type === 'ShipBullet') {
+      this.shipBullets.splice(this.shipBullets.indexOf(entity), 1);
+    } else if (entity.type === 'AlienBullet') {
+      this.alienBullets.splice(this.alienBullets.indexOf(entity), 1);
+    } else if (entity.type === 'Alien') {
+      this.aliens.splice(this.aliens.indexOf(entity), 1);
+    }
+  }
+  takeShipLife() {
+    if (this.ship[0].isCollidable()) {
+      this.addExplosion(this.ship[0]);
+      this.ship[0].counter = 0;
+      this.shipLives -= 1;
+      this.ship[0].pos = Object.assign([], this.stateManager.config.shipStartPos);
+    }
+  }
+  shipCollisions() {
+    this.collidesWithRock(this.ship[0]);
+    this.alienBullets.concat(this.aliens).forEach(entity => {
+      this.collidesWithRock(entity);
+      let distance = _spaceInvadersUtils__WEBPACK_IMPORTED_MODULE_6__["default"].distance(entity.pos, this.ship[0].pos);
+      if (distance <= entity.radius + this.ship[0].radius) {
+        this.remove(entity);
+        this.addExplosion(entity);
+        this.takeShipLife();
+      }
+    });
+  }
+  collidesWithRock(entity) {
+    let collided = false;
+    let distance = _spaceInvadersUtils__WEBPACK_IMPORTED_MODULE_6__["default"].distance(this.rock[0].pos, entity.pos);
+    if (distance <= entity.radius + this.rock[0].radius) {
+      collided = true;
+    }
+    if (entity.type === 'ShipBullet' && collided) {
+      this.remove(entity);
+      this.rock[0].vector[1] -= 1;
+      this.addExplosion(entity);
+    } else if (entity.type === 'AlienBullet' && collided) {
+      this.remove(entity);
+      this.addExplosion(entity);
+      this.rock[0].vector[1] += 1;
+    } else if (entity.type === 'Alien' && collided) {
+      this.score += 100;
+      this.remove(entity);
+      this.addExplosion(entity);
+    } else if (entity.type === 'Ship' && collided) {
+      this.takeShipLife();
+    }
+  }
+  alienCollisions() {
+    this.shipBullets.forEach(shipBullet => {
+      this.collidesWithRock(shipBullet);
+      this.aliens.forEach(alien => {
+        let distance = _spaceInvadersUtils__WEBPACK_IMPORTED_MODULE_6__["default"].distance(alien.pos, shipBullet.pos);
+        if (distance <= alien.radius + shipBullet.radius) {
+          this.score += 100;
+          this.remove(alien);
+          this.remove(shipBullet);
+          this.addExplosion(alien);
+        }
+      });
+    });
+  }
+  checkCollisions() {
+    this.shipCollisions();
+    this.alienCollisions();
+  }
+  spawnAliens() {
+    this.spawnCounter += 1;
+    if (this.spawnCounter % this.stateManager.config.respawnRate === 0 || this.aliens.length === 0) {
+      this.aliens = this.aliens.concat(this.makeAliens());
+      this.spawnCounter = 0;
+    }
+  }
+  setHighScore() {
+    if (localStorage.spaceInvadersHighScores && this.score > localStorage.spaceInvadersHighScores) {
+      localStorage.spaceInvadersHighScores = this.score;
+    }
+  }
+  isGameOver() {
+    if (this.shipLives <= 0) {
+      this.shipLives = this.stateManager.config.shipLives;
+      this.stateManager.setMenuState();
+      this.setHighScore();
+      this.score = 0;
+      return true;
+    }
+  }
+  tick() {
+    if (this.counter % this.stateManager.config.alienWobble === 20) {
+      this.setVectorForAlien();
+    }
+    this.joinEntities().forEach(entity => entity.tick());
+    this.checkCollisions();
+    this.spawnAliens();
+    this.counter += 1;
+  }
+  render() {
+    this.joinEntities().forEach(entity => entity.render());
+    this.isGameOver();
+  }
+  postRender() {
+    this.joinEntities().forEach(entity => entity.postRender());
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PlayingState);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/keyManager.js":
+/*!****************************************************!*\
+  !*** ./src/components/invaders_view/keyManager.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class KeyManager {
+  constructor(config) {
+    this.stateManager = config.stateManager;
+    this.upPressed = false;
+    this.downPressed = false;
+    this.leftPressed = false;
+    this.rightPressed = false;
+    this.spacePressed = false;
+    this.init();
+  }
+  init() {
+    let keyUp = this.handleKeyUp.bind(this);
+    let keyDown = this.handleKeyDown.bind(this);
+    window.addEventListener('keyup', keyUp);
+    window.addEventListener('keydown', keyDown);
+    this.clearKeyListeners = () => {
+      window.removeEventListener('keyup', keyUp);
+      window.removeEventListener('keydown', keyDown);
+    };
+  }
+  addStartListener() {
+    let start = e => {
+      if (e.keyCode === 13) {
+        this.stateManager.currentState = this.stateManager.playingState;
+        window.removeEventListener('keydown', start);
+      }
+    };
+    window.addEventListener('keydown', start);
+  }
+  handleKeyDown(e) {
+    if (e.keyCode === 65) {
+      this.leftPressed = true;
+    } else if (e.keyCode === 68) {
+      this.rightPressed = true;
+    }
+    if (e.keyCode === 83) {
+      this.downPressed = true;
+    } else if (e.keyCode === 87) {
+      this.upPressed = true;
+    }
+    if (e.keyCode === 32) {
+      this.spacePressed = true;
+    }
+  }
+  handleKeyUp(e) {
+    if (e.keyCode === 65) {
+      this.leftPressed = false;
+    } else if (e.keyCode === 68) {
+      this.rightPressed = false;
+    }
+    if (e.keyCode === 83) {
+      this.downPressed = false;
+    } else if (e.keyCode === 87) {
+      this.upPressed = false;
+    }
+    if (e.keyCode === 32) {
+      this.spacePressed = false;
+    }
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (KeyManager);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/left_panel_space_invaders.js":
+/*!*******************************************************************!*\
+  !*** ./src/components/invaders_view/left_panel_space_invaders.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -241,10 +1048,192 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Links_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Links.js */ "./src/components/Links.js");
 
 
-function InvadersView() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "\"Invaders\"", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Links_js__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+class LeftPanelSpaceInvaders extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
+  constructor(props) {
+    super(props);
+  }
+  componentDidMount() {
+    this.listener = this.props.game.addScoreListener(this.forceUpdate.bind(this));
+  }
+  componentWillReceiveProps(props) {
+    this.listener = props.game.addScoreListener(this.forceUpdate.bind(this));
+  }
+  componentWillUnmount() {
+    this.listener.remove();
+  }
+  render() {
+    let game = this.props.game;
+    let shipLives = game ? Array(game.playingState.shipLives).fill().map((el, idx) => {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+        key: idx,
+        src: "src/components/invaders_view/assets/images/ship.png"
+      });
+    }) : undefined;
+    let score = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: 'left-panel-score'
+    }, "High Score: ", localStorage.spaceInvadersHighScores, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Current Score: ", game ? game.currentState.score : undefined, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: 'left-panel-lives'
+    }, shipLives));
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "left-panel"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "left-panel-profile"
+    }, score), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Links_js__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+  }
 }
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InvadersView);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LeftPanelSpaceInvaders);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/spaceInvadersConfig.js":
+/*!*************************************************************!*\
+  !*** ./src/components/invaders_view/spaceInvadersConfig.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const SpaceInvadersConfig = {
+  gameWidth: 800,
+  gameHeight: 600,
+  entityRadius: 20,
+  shipStartPos: [400, 500],
+  rockStartPos: [400, 300],
+  shipMoveSpeed: 2,
+  rockSpeed: 2,
+  shipBulletSpeed: 3,
+  alienBulletSpeed: 2,
+  alienBulletFrequency: 1000,
+  alienGap: 95,
+  alienWobble: 60,
+  alienStartPos: 40,
+  respawnRate: 2000,
+  shipLives: 5
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SpaceInvadersConfig);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/spaceInvadersUtils.js":
+/*!************************************************************!*\
+  !*** ./src/components/invaders_view/spaceInvadersUtils.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const SpaceInvadersUtils = {
+  distance: function (posOne, posTwo) {
+    return Math.sqrt(Math.pow(posOne[0] - posTwo[0], 2) + Math.pow(posOne[1] - posTwo[1], 2));
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SpaceInvadersUtils);
+
+/***/ }),
+
+/***/ "./src/components/invaders_view/stateManager.js":
+/*!******************************************************!*\
+  !*** ./src/components/invaders_view/stateManager.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _gameState_menuState__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gameState/menuState */ "./src/components/invaders_view/gameState/menuState.js");
+/* harmony import */ var _gameState_playingState__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gameState/playingState */ "./src/components/invaders_view/gameState/playingState.js");
+/* harmony import */ var _keyManager__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./keyManager */ "./src/components/invaders_view/keyManager.js");
+/* harmony import */ var _spaceInvadersConfig__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./spaceInvadersConfig */ "./src/components/invaders_view/spaceInvadersConfig.js");
+
+
+
+
+class StateManager {
+  constructor(init) {
+    this.config = _spaceInvadersConfig__WEBPACK_IMPORTED_MODULE_3__["default"];
+    this.gameWidth = _spaceInvadersConfig__WEBPACK_IMPORTED_MODULE_3__["default"].gameWidth;
+    this.gameHeight = _spaceInvadersConfig__WEBPACK_IMPORTED_MODULE_3__["default"].gameHeight;
+    this.keyManager = new _keyManager__WEBPACK_IMPORTED_MODULE_2__["default"]({
+      stateManager: this
+    });
+    this.menuState = new _gameState_menuState__WEBPACK_IMPORTED_MODULE_0__["default"]({
+      stateManager: this
+    });
+    this.playingState = new _gameState_playingState__WEBPACK_IMPORTED_MODULE_1__["default"]({
+      stateManager: this
+    });
+    this.currentState = this.menuState;
+    this.context = init.context;
+    this.reactView = init.reactView;
+    this.running = false;
+    this.forceUpdate = undefined;
+    this.showMenu();
+  }
+  showMenu() {
+    this.setMenuState();
+    this.run();
+  }
+  unMountGame() {
+    this.running = false;
+    this.keyManager.clearKeyListeners();
+  }
+  setMenuState() {
+    this.currentState = this.menuState;
+    this.keyManager.addStartListener();
+  }
+  addScoreListener(listener) {
+    this.forceUpdate = listener;
+    return {
+      remove: () => delete this.forceUpdate
+    };
+  }
+  preTick() {
+    this.currentState.preTick();
+  }
+  tick() {
+    this.currentState.tick();
+  }
+  render() {
+    this.context.clearRect(0, 0, 800, 600);
+    this.currentState.render();
+  }
+  postRender() {
+    this.currentState.postRender();
+  }
+  run() {
+    this.running = true;
+    // let timeNow = Date.now(),
+    //     millisecondsPerFrame = (1000/60),
+    //     timeDelta = 0,
+    //     nextTime = undefined
+    this.interval = setInterval(() => {
+      // nextTime = Date.now()
+      // timeDelta += (nextTime - timeNow)
+      // timeNow = nextTime
+
+      if (this.running) {
+        this.forceUpdate();
+        // this.preTick()
+        this.tick();
+        this.render();
+        // this.postRender()
+      } else {
+        clearInterval(this.interval);
+      }
+
+      //   timeDelta -= millisecondsPerFrame
+    }, 1000 / 60);
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (StateManager);
 
 /***/ }),
 
@@ -254,6 +1243,7 @@ function InvadersView() {
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -309,6 +1299,7 @@ function Route(props) {
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -382,6 +1373,7 @@ function Router(props) {
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 /**
  * @license React
  * react-dom.development.js
@@ -30310,6 +31302,7 @@ if (
   \******************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 
 
 var m = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
@@ -30342,6 +31335,7 @@ if (false) {} else {
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 function checkDCE() {
@@ -30385,6 +31379,7 @@ if (false) {} else {
   \*****************************************************/
 /***/ ((module, exports, __webpack_require__) => {
 
+"use strict";
 /* module decorator */ module = __webpack_require__.nmd(module);
 /**
  * @license React
@@ -33136,6 +34131,7 @@ if (
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (false) {} else {
@@ -33151,6 +34147,7 @@ if (false) {} else {
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 /**
  * @license React
  * scheduler.development.js
@@ -33795,6 +34792,7 @@ if (
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (false) {} else {
@@ -33885,6 +34883,9 @@ if (false) {} else {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
 /*!*********************************!*\
   !*** ./src/components/Entry.js ***!
   \*********************************/
@@ -33917,6 +34918,8 @@ const root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_2__.createRoot)(contai
 root.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Entry, null));
 
 // test push
+})();
+
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
