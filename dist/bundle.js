@@ -47,14 +47,101 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _introduction_view_IntroductionView_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./introduction_view/IntroductionView.js */ "./src/components/introduction_view/IntroductionView.js");
 /* harmony import */ var _invaders_view_InvadersView_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./invaders_view/InvadersView.js */ "./src/components/invaders_view/InvadersView.js");
+/* harmony import */ var _contact_view_ContactView_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact_view/ContactView.js */ "./src/components/contact_view/ContactView.js");
+
 
 
 
 let Views = {
   "Introduction": _introduction_view_IntroductionView_js__WEBPACK_IMPORTED_MODULE_1__["default"],
-  "Invaders": _invaders_view_InvadersView_js__WEBPACK_IMPORTED_MODULE_2__["default"]
+  "Invaders": _invaders_view_InvadersView_js__WEBPACK_IMPORTED_MODULE_2__["default"],
+  "Contact": _contact_view_ContactView_js__WEBPACK_IMPORTED_MODULE_3__["default"]
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Views);
+
+/***/ }),
+
+/***/ "./src/components/contact_view/ContactView.js":
+/*!****************************************************!*\
+  !*** ./src/components/contact_view/ContactView.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _introduction_view_IntroductionLeftPanel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../introduction_view/IntroductionLeftPanel.js */ "./src/components/introduction_view/IntroductionLeftPanel.js");
+/* harmony import */ var _introduction_view_IntroductionView_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../introduction_view/IntroductionView.js */ "./src/components/introduction_view/IntroductionView.js");
+
+
+
+const formStyle = {
+  padding: '20px',
+  display: "flex",
+  margin: "20px",
+  textAlign: "left"
+};
+const textInput = {
+  width: "500px",
+  height: "150px",
+  textAlign: "left",
+  border: "1px solid",
+  borderRadius: "2px",
+  resize: "none"
+};
+const emailInput = {
+  width: "500px",
+  height: "40px",
+  display: 'block',
+  textAlign: "left",
+  border: "1px solid",
+  borderRadius: "2px"
+};
+const textSizing = {
+  fontSize: "24px"
+};
+const submitButton = {
+  marginRight: "60px",
+  color: "black",
+  display: "block",
+  borderRadius: "3px",
+  border: "1px solid black",
+  height: "60px",
+  marginTop: "10px",
+  textAlign: "center",
+  fontSize: "30px",
+  lineHeight: "55px",
+  cursor: "pointer"
+};
+const contact = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
+  style: formStyle,
+  action: "https://formspree.io/f/mnnvglba",
+  method: "POST"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+  style: submitButton,
+  type: "submit",
+  value: "Send"
+})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  style: textSizing
+}, "Type a text message to Qin's email:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("textarea", {
+  style: textInput,
+  name: "name"
+})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  style: textSizing
+}, "Type in your Email Address:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+  style: emailInput,
+  type: "email",
+  name: "_replyto"
+}))));
+function ContactView() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_introduction_view_IntroductionView_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    embeddedView: contact
+  }));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ContactView);
 
 /***/ }),
 
@@ -101,12 +188,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _IntroductionLeftPanel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./IntroductionLeftPanel.js */ "./src/components/introduction_view/IntroductionLeftPanel.js");
 
 
-function IntroductionView() {
+const links = [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  key: 'github',
+  className: 'links intro-link',
+  href: "https://github.com/zhu-qin"
+}, "Github"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  key: 'linkedin',
+  className: 'links intro-link',
+  href: "https://www.linkedin.com/in/zhu-qin/"
+}, "LinkedIn")];
+const skillIcons = ["ruby.png", "rails.png", "javascript.png", "react.png", "html.png", "css.png", "jquery.png", "postgresql.png", "git.png", "aws.png"].map(src => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "intro-skills-list-icon",
+    key: src
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: `src/assets/skills_icons/${src}`
+  }));
+});
+function IntroductionView(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "game-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_IntroductionLeftPanel_js__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "game-view"
-  }));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "intro-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "intro-title"
+  }, "Qin Zhu"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "intro-paragraph"
+  }, "Hi, I'm Qin Zhu. I'm a software engineer based in New York City, USA. The languages I work with include Javascript, HTML, CSS, Ruby, and Java. My experiences include building and deploying user interfaces for enterprise content management software.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "intro-skills-list"
+  }, skillIcons), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: 'intro-links-wrapper'
+  }, props.embeddedView ? props.embeddedView : links))));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IntroductionView);
 
