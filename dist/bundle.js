@@ -49,6 +49,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _introduction_view_IntroductionView_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./introduction_view/IntroductionView.js */ "./src/components/introduction_view/IntroductionView.js");
 /* harmony import */ var _contact_view_ContactView_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact_view/ContactView.js */ "./src/components/contact_view/ContactView.js");
 /* harmony import */ var _invaders_view_InvadersView_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./invaders_view/InvadersView.js */ "./src/components/invaders_view/InvadersView.js");
+/* harmony import */ var _tetris_view_BlocksView_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tetris_view/BlocksView.jsx */ "./src/components/tetris_view/BlocksView.jsx");
+/* harmony import */ var _sample_app_SampleAppView_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sample_app/SampleAppView.js */ "./src/components/sample_app/SampleAppView.js");
+
+
 
 
 
@@ -56,6 +60,8 @@ __webpack_require__.r(__webpack_exports__);
 let Views = {
   "Introduction": _introduction_view_IntroductionView_js__WEBPACK_IMPORTED_MODULE_1__["default"],
   "Invaders": _invaders_view_InvadersView_js__WEBPACK_IMPORTED_MODULE_3__["default"],
+  "Blocks": _tetris_view_BlocksView_jsx__WEBPACK_IMPORTED_MODULE_4__["default"],
+  "App": _sample_app_SampleAppView_js__WEBPACK_IMPORTED_MODULE_5__["default"],
   "Contact": _contact_view_ContactView_js__WEBPACK_IMPORTED_MODULE_2__["default"]
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Views);
@@ -1364,6 +1370,589 @@ function Router(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, path ? ROUTES[path] : undefined);
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Router);
+
+/***/ }),
+
+/***/ "./src/components/sample_app/SampleAppView.js":
+/*!****************************************************!*\
+  !*** ./src/components/sample_app/SampleAppView.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _introduction_view_IntroductionLeftPanel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../introduction_view/IntroductionLeftPanel.js */ "./src/components/introduction_view/IntroductionLeftPanel.js");
+
+// import LeftPanelIntro from '../intro/left_panel_intro';
+
+const textStyle = {
+  padding: '5px',
+  fontSize: '18px',
+  textAlign: 'left'
+};
+class SampleAppView extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "game-wrapper"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_introduction_view_IntroductionLeftPanel_js__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "gameview"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "intro-wrapper"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      style: textStyle
+    }, "This application was built with Polymer.JS and Redux.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Using the latest web components standards, the application is event driven, declarative, and focused on user experience."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("video", {
+      src: "src/assets/nuxeo_app.mp4",
+      controls: true
+    }))));
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SampleAppView);
+
+/***/ }),
+
+/***/ "./src/components/tetris_view/BlocksView.jsx":
+/*!***************************************************!*\
+  !*** ./src/components/tetris_view/BlocksView.jsx ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _left_panel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./left_panel */ "./src/components/tetris_view/left_panel.jsx");
+/* harmony import */ var _right_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./right_panel */ "./src/components/tetris_view/right_panel.jsx");
+/* harmony import */ var _tetris_game__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tetris_game */ "./src/components/tetris_view/tetris_game.jsx");
+
+
+
+
+class BlocksView extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
+  constructor(props) {
+    super(props);
+    this.state = {
+      game: new _tetris_game__WEBPACK_IMPORTED_MODULE_3__["default"](this)
+    };
+  }
+  makeNewGame() {
+    this.state.game.removeListeners();
+    this.setState({
+      game: new _tetris_game__WEBPACK_IMPORTED_MODULE_3__["default"](this)
+    });
+  }
+  componentWillUnmount() {
+    this.state.game.removeListeners();
+    this.state.game.stopGame();
+  }
+  render() {
+    let game = this.state.game;
+    let rows = game.grid.map((row, idx1) => {
+      let units = row.map((unit, idx2) => {
+        let currentPieceClass;
+        game.currentPiece.coords.forEach(coord => {
+          if (idx1 === coord[0] && idx2 === coord[1]) {
+            currentPieceClass = game.currentPiece.fillColor;
+          }
+        });
+        let additionClass;
+        if (unit.filled) {
+          additionClass = unit.filled;
+        }
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+          key: idx2,
+          className: `block ${additionClass} ${currentPieceClass}`
+        });
+      });
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        key: idx1,
+        className: `row row-index-${idx1}`
+      }, units);
+    });
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "game-wrapper"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_left_panel__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      game: this.state.game,
+      makeNewGame: this.makeNewGame.bind(this)
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "gameview"
+    }, rows), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_right_panel__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      game: this.state.game,
+      makeNewGame: this.makeNewGame.bind(this)
+    }));
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BlocksView);
+
+/***/ }),
+
+/***/ "./src/components/tetris_view/constants.js":
+/*!*************************************************!*\
+  !*** ./src/components/tetris_view/constants.js ***!
+  \*************************************************/
+/***/ ((module) => {
+
+const CONSTANTS = {
+  gameWidth: 14,
+  pieces: {
+    // square piece
+    0: {
+      init: [[1, 6], [1, 7], [0, 6], [0, 7]]
+    },
+    // Line piece
+    1: {
+      init: [[1, 5], [1, 6], [1, 7], [1, 8]]
+    },
+    // T piece
+    2: {
+      init: [[1, 6], [1, 7], [1, 8], [0, 7]]
+    },
+    // Z piece
+    3: {
+      init: [[1, 6], [0, 7], [1, 7], [0, 8]]
+    },
+    // Z piece
+    4: {
+      init: [[1, 6], [0, 6], [1, 7], [0, 5]]
+    },
+    // L piece
+    5: {
+      init: [[0, 6], [1, 6], [1, 7], [1, 8]]
+    },
+    // L piece
+    6: {
+      init: [[0, 8], [1, 8], [1, 7], [1, 6]]
+    }
+  },
+  colors: ["red", "blue", "orange", "teal", "purple", "green", "red"],
+  translateLeft: [0, -1],
+  translateRight: [0, 1],
+  translateDown: [1, 0],
+  rotateClockwise: [[0, 1], [-1, 0]],
+  rotateCounterClockwise: [[0, -1], [1, 0]]
+};
+module.exports = CONSTANTS;
+
+/***/ }),
+
+/***/ "./src/components/tetris_view/control_button.jsx":
+/*!*******************************************************!*\
+  !*** ./src/components/tetris_view/control_button.jsx ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+class ControlButton extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
+  constructor(props) {
+    super(props);
+  }
+  _movePiece(e) {
+    this.props.game.keyDownEvent(e, this.props.control);
+  }
+  render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: `control-button move${this.props.control}`,
+      onClick: this._movePiece.bind(this)
+    }, this.props.control);
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ControlButton);
+
+/***/ }),
+
+/***/ "./src/components/tetris_view/left_panel.jsx":
+/*!***************************************************!*\
+  !*** ./src/components/tetris_view/left_panel.jsx ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _control_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./control_button */ "./src/components/tetris_view/control_button.jsx");
+/* harmony import */ var _Links_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Links.js */ "./src/components/Links.js");
+
+
+
+class LeftPanel extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
+  constructor(props) {
+    super(props);
+  }
+  makeGrid() {
+    return Array(4).fill().map(el => {
+      return Array(4).fill({});
+    });
+  }
+  render() {
+    let game = this.props.game;
+    let sideDisplayNext;
+    let score = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: 'left-panel-score'
+    }, "High Score: ", localStorage.tetrisHighScore, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Current Score: ", game.score);
+    if (!game.gameLost) {
+      let grid = this.makeGrid();
+      game.nextPiece.coords.forEach(coord => {
+        grid[coord[0] + 1][coord[1] - 5] = game.nextPiece.fillColor;
+      });
+      let rows = grid.map((row, rowIdx) => {
+        let units = row.map((unit, unitIdx) => {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+            key: unitIdx,
+            className: `display-block ${unit}`
+          });
+        });
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+          key: rowIdx,
+          className: "row"
+        }, units);
+      });
+      sideDisplayNext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "nextpiece-display"
+      }, "Next Piece:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "nextpiece-display-block"
+      }, rows));
+    } else {
+      sideDisplayNext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "nextpiece-display"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "nextpiece-display-gameover"
+      }, "GAME OVER"));
+    }
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "left-panel"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "left-panel-profile"
+    }, score, sideDisplayNext), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Links_js__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LeftPanel);
+
+/***/ }),
+
+/***/ "./src/components/tetris_view/piece.jsx":
+/*!**********************************************!*\
+  !*** ./src/components/tetris_view/piece.jsx ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants.js */ "./src/components/tetris_view/constants.js");
+/* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_constants_js__WEBPACK_IMPORTED_MODULE_0__);
+
+class Piece {
+  constructor() {
+    this.pieceType = Piece.getRandomIntInclusive();
+    this.coords = (_constants_js__WEBPACK_IMPORTED_MODULE_0___default().pieces)[this.pieceType].init;
+    this.fillColor = (_constants_js__WEBPACK_IMPORTED_MODULE_0___default().colors)[this.pieceType];
+  }
+  static getRandomIntInclusive() {
+    let min = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    let max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Piece);
+
+/***/ }),
+
+/***/ "./src/components/tetris_view/right_panel.jsx":
+/*!****************************************************!*\
+  !*** ./src/components/tetris_view/right_panel.jsx ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _control_button_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./control_button.jsx */ "./src/components/tetris_view/control_button.jsx");
+
+
+class RightPanel extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
+  constructor(props) {
+    super(props);
+  }
+  changeGameSpeed(e) {
+    let game = this.props.game;
+    game.speed = Math.abs(1000 - e.target.value);
+    if (game.running) {
+      game.stopGame();
+      game.startGame();
+    }
+    this.forceUpdate();
+  }
+  toggleGame(e) {
+    if (this.props.game.running) {
+      this.props.game.stopGame();
+    } else {
+      this.props.game.startGame();
+    }
+    this.forceUpdate();
+  }
+  render() {
+    let game = this.props.game;
+    let toggleGameButton = game.running ? "PAUSE" : "START";
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "right-panel"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "instructions"
+    }, "A - move left ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "D - move right ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "S - move down ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Q - rotate counter-clockwise ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "E - rotate clockwise ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "game-buttons-wrapper"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Speed: ", 1000 - game.speed, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+      className: "slide-bar",
+      onChange: this.changeGameSpeed.bind(this),
+      value: 1000 - game.speed,
+      type: "range",
+      min: "1",
+      max: "1000"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: `game-buttons ${toggleGameButton}`,
+      onClick: this.toggleGame.bind(this)
+    }, toggleGameButton), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "game-buttons",
+      onClick: this.props.makeNewGame
+    }, "RESET")));
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RightPanel);
+
+/***/ }),
+
+/***/ "./src/components/tetris_view/tetris_game.jsx":
+/*!****************************************************!*\
+  !*** ./src/components/tetris_view/tetris_game.jsx ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _piece__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./piece */ "./src/components/tetris_view/piece.jsx");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./src/components/tetris_view/constants.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_constants__WEBPACK_IMPORTED_MODULE_1__);
+
+
+class TetrisGame {
+  constructor(view) {
+    this.score = 0;
+    this.view = view;
+    this.running = false;
+    this.gameLost = false;
+    this.grid = [];
+    this.nextPiece = new _piece__WEBPACK_IMPORTED_MODULE_0__["default"]();
+    this.currentPiece = new _piece__WEBPACK_IMPORTED_MODULE_0__["default"]();
+    this.speed = 500;
+    this.addListeners();
+    this.makeGrid();
+  }
+  // INIT
+  makeNewPiece() {
+    this.currentPiece = this.nextPiece;
+    this.nextPiece = new _piece__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  }
+  stopGame() {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
+    this.running = false;
+  }
+  startGame() {
+    let callback = function () {
+      this.updatePosition((_constants__WEBPACK_IMPORTED_MODULE_1___default().translateDown), this.moveDownCallback.bind(this));
+    };
+    this.interval = setInterval(callback.bind(this), this.speed);
+    this.running = true;
+  }
+  keyDownEvent(e, button) {
+    if (this.running) {
+      if (e.key === 'a' || button === "left") {
+        this.updatePosition((_constants__WEBPACK_IMPORTED_MODULE_1___default().translateLeft));
+      } else if (e.key === 'd' || button === "right") {
+        this.updatePosition((_constants__WEBPACK_IMPORTED_MODULE_1___default().translateRight));
+      } else if (e.key === 's' || button === "down") {
+        this.updatePosition((_constants__WEBPACK_IMPORTED_MODULE_1___default().translateDown), this.moveDownCallback.bind(this));
+      }
+      if ((e.key === 'q' || button === 'rotateL') && this.currentPiece.coords[1][0] > 1) {
+        this.updatePosition((_constants__WEBPACK_IMPORTED_MODULE_1___default().rotateCounterClockwise));
+      } else if ((e.key === 'e' || button === 'rotateR') && this.currentPiece.coords[1][0] > 1) {
+        this.updatePosition((_constants__WEBPACK_IMPORTED_MODULE_1___default().rotateClockwise));
+      }
+    }
+  }
+  addListeners() {
+    this.listener = this.keyDownEvent.bind(this);
+    document.addEventListener('keydown', this.listener);
+  }
+  removeListeners() {
+    document.removeEventListener('keydown', this.listener);
+  }
+
+  // GAME LOGIC
+  rotate(matrix) {
+    let center = this.currentPiece.coords[1];
+    let relativePos = this.currentPiece.coords.map(coord => {
+      return [coord[0] - center[0], coord[1] - center[1]];
+    });
+    let rotated = relativePos.map(coord => {
+      let row = matrix[0][0] * coord[0] + matrix[0][1] * coord[1];
+      let col = matrix[1][0] * coord[0] + matrix[1][1] * coord[1];
+      return [row, col];
+    });
+    let finalPos = rotated.map(coord => {
+      return [coord[0] + center[0], coord[1] + center[1]];
+    });
+    return finalPos;
+  }
+  translate(delta) {
+    let finalPos = this.currentPiece.coords.map(coord => {
+      return [coord[0] + delta[0], coord[1] + delta[1]];
+    });
+    return finalPos;
+  }
+  checkValid(coords) {
+    let results;
+    coords.forEach(coord => {
+      if (this.grid[coord[0]][coord[1]].filled) {
+        results = this.grid[coord[0]][coord[1]].filled;
+      }
+    });
+    return results;
+  }
+  updatePosition(delta, callback) {
+    let temp;
+    if (Array.isArray(delta[0])) {
+      if (this.currentPiece.pieceType !== 0) {
+        temp = this.rotate(delta);
+      } else {
+        temp = this.currentPiece.coords;
+      }
+    } else {
+      temp = this.translate(delta);
+    }
+    let checkBorder = this.checkValid(temp);
+    if (!checkBorder) {
+      this.currentPiece.coords = temp;
+    } else if (checkBorder === 'left') {
+      this.currentPiece.coords = temp;
+      this.updatePosition((_constants__WEBPACK_IMPORTED_MODULE_1___default().translateRight));
+    } else if (checkBorder === 'right') {
+      this.currentPiece.coords = temp;
+      this.updatePosition((_constants__WEBPACK_IMPORTED_MODULE_1___default().translateLeft));
+    } else if (checkBorder && callback) {
+      callback();
+    }
+    this.view.forceUpdate();
+  }
+  moveDownCallback() {
+    this.currentPiece.coords.forEach(coord => {
+      this.grid[coord[0]][coord[1]].filled = this.currentPiece.fillColor;
+      this.grid[coord[0]].fillCount += 1;
+    });
+    this.checkCompleteRows();
+    if (this.checkGameOver()) {
+      clearInterval(this.interval);
+      this.gameLost = true;
+      this.removeListeners();
+      this.view.forceUpdate();
+    } else {
+      this.makeNewPiece();
+    }
+  }
+  checkGameOver() {
+    for (let i = 2; i < (_constants__WEBPACK_IMPORTED_MODULE_1___default().gameWidth) - 2; i += 1) {
+      if (this.grid[0][i].filled) {
+        return true;
+      }
+    }
+  }
+  checkCompleteRows() {
+    let completedRows = [];
+    for (let i = 21; i > 0; i -= 1) {
+      if (this.grid[i].fillCount === (_constants__WEBPACK_IMPORTED_MODULE_1___default().gameWidth)) {
+        completedRows.push(i);
+      }
+    }
+    if (completedRows.length > 0) {
+      this.deleteFullRows(completedRows);
+    }
+  }
+  deleteFullRows(completedRows) {
+    completedRows.forEach(row => {
+      delete this.grid[row];
+    });
+    this.grid = this.grid.filter(row => {
+      if (row) {
+        return row;
+      }
+    });
+    this.score += 100 * completedRows.length;
+    if (this.score > localStorage.tetrisHighScore) {
+      localStorage.tetrisHighScore = this.score;
+    }
+    this.buildRow();
+  }
+  buildRow() {
+    let i = this.grid.length;
+    while (i < 23) {
+      let row = [];
+      row.fillCount = 0;
+      for (let j = 0; j < (_constants__WEBPACK_IMPORTED_MODULE_1___default().gameWidth); j += 1) {
+        if (j === 0 || j === 1) {
+          row.push({
+            filled: 'left'
+          });
+          row.fillCount += 1;
+        } else if (j === (_constants__WEBPACK_IMPORTED_MODULE_1___default().gameWidth) - 2 || j === (_constants__WEBPACK_IMPORTED_MODULE_1___default().gameWidth) - 1) {
+          row.push({
+            filled: 'right'
+          });
+          row.fillCount += 1;
+        } else {
+          row.push({});
+        }
+      }
+      this.grid.unshift(row);
+      i += 1;
+    }
+  }
+  makeGrid() {
+    this.grid.push(Array((_constants__WEBPACK_IMPORTED_MODULE_1___default().gameWidth)).fill({
+      filled: 'bottom'
+    }));
+    this.buildRow();
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TetrisGame);
 
 /***/ }),
 

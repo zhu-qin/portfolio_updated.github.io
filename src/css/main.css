@@ -7,10 +7,24 @@ body, div, a {
     letter-spacing: inherit;
 }
 
+body {
+  background-image: url('../assets/background.png');
+}
+
+div {
+  border-radius: 3px;
+}
+
+video {
+  object-fit: contain;
+  width: 100%;
+  margin-top: 60px;
+}
+
 .links {
+    border-radius: 3px;
     color: black;
     display: block;
-    border-radius: 3px;
     border: 1px solid black;
     height: 60px;
     margin-top: 10px;
